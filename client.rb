@@ -1,8 +1,9 @@
 class Client
-  def initialize(c_name, c_age, c_gender, animal_list)
+  def initialize(c_name, c_age, c_gender, c_kids, animal_list)
     @name = c_name
     @age = c_age
     @gender = c_gender
+    @kids = c_kids
     @animal_list = animal_list
   end
 
@@ -16,6 +17,10 @@ class Client
 
   def gender
     @gender
+  end
+
+  def kids
+    @kids
   end
 
   def animal_list

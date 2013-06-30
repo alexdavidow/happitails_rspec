@@ -1,5 +1,7 @@
 require_relative 'client'
 
+# Track their names, ages, gender, kids and the number of pets they have.
+
 class ClientSpec
 
   describe 'Client' do
@@ -7,8 +9,9 @@ class ClientSpec
       @c_name = 'alex'
       @c_age = 26
       @c_gender = 'male'
+      @c_kids = ['Tim', 'Tom']
       @animal_list = ['bonzo', 'kensington']
-      @client = Client.new(@c_name, @c_age, @c_gender, @animal_list)
+      @client = Client.new(@c_name, @c_age, @c_gender, @c_kids, @animal_list)
     end 
 
     it 'has a name' do
@@ -22,6 +25,11 @@ class ClientSpec
     it 'has a gender' do
       @client.gender.should eq @c_gender
     end
+
+    it 'has a list of kids' do
+      @client.kids.should eq @c_kids
+    end
+
     it 'has a list of animals' do
       @client.animal_list.should eq @animal_list
     end  

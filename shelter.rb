@@ -19,4 +19,8 @@ class Shelter
   def client_list
     @client_list
   end
+
+  def add_client(client)
+    @client_list << client
+  end
 end
